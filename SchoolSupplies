@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class SchoolSupplies {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        
+        int numberOfPenPackages = scanner.nextInt();
+        
+        int numberOfMarkerPackages = scanner.nextInt();
+        
+        int litersOfCleaner = scanner.nextInt();
+        
+        int discountPercentage = scanner.nextInt();
+
+        
+        double penPrice = 5.80;
+        double markerPrice = 7.20;
+        double cleanerPrice = 1.20;
+
+      
+        double totalCost = (numberOfPenPackages * penPrice) +
+                           (numberOfMarkerPackages * markerPrice) +
+                           (litersOfCleaner * cleanerPrice);
+
+        
+        double discountAmount = (totalCost * discountPercentage) / 100;
+
+        
+        double finalCost = totalCost - discountAmount;
+
+     
+        System.out.printf("%.2f\n", finalCost);
+
+        scanner.close();
+    }
+}
